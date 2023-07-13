@@ -1,10 +1,13 @@
+""" create node class wiht data and pointer """
 class Node:
     def __init__(self,value):
         self.data=value
         self.next=None
+""" Create a linked list"""
 class LinkedList():
     def __init__(self) -> None:
         self.head=None
+    """ insert the value in linked list"""
     def insertValue(self,value):
         currentNode=Node(value)
         if self.head is None:
@@ -14,6 +17,7 @@ class LinkedList():
             while temp.next!= None:
                 temp=temp.next
             temp.next=currentNode
+    """ Delete a certain value from the linked list"""
     def deleteValue(self,targetValue):
         currentNode=self.head
         prevNode=None
@@ -32,10 +36,10 @@ class LinkedList():
                         print('middle node is deleted')
                         prevNode.next=currentNode.next
                         return 0
-
                 else:
                     prevNode=currentNode
                     currentNode=currentNode.next
+    """ Get the index of the certain element """
     def getIndex(self,targetValue):
         currentNode =self.head
         count=0
@@ -46,6 +50,7 @@ class LinkedList():
             else:
                 currentNode = currentNode.next
                 count+=1
+    """ Reverse the given linked list"""
     def reverseList(self):
         prevNode=None
         currentNode=self.head
@@ -55,6 +60,7 @@ class LinkedList():
             prevNode=currentNode
             currentNode=nextNode
         self.head=prevNode
+    """ print the linked list """
     def printList(self):
         currentNode=self.head
         while currentNode is not None:
@@ -62,7 +68,6 @@ class LinkedList():
             currentNode=currentNode.next
 if __name__=="__main__":
     obj1=LinkedList()
-    
     obj1.insertValue(5)
     obj1.insertValue(6)
     obj1.insertValue(7)
