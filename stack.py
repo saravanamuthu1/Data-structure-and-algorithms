@@ -29,3 +29,11 @@ class Arraystack:
             Check whether the stack is empty
         """
         return len(self.data) == 0
+    def top(self):
+        """
+        Get the top element without removing the top element
+        """
+        if(self.is_empty()):
+            raise Empty("stack is empty")
+        else:
+            return self.data[-1]
