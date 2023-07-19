@@ -96,3 +96,4 @@ if __name__=="__main__":
     obj1.reverseList()
     obj1.getIndex(7)
     obj1.printList()
+    

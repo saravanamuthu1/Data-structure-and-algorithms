@@ -1,5 +1,7 @@
-class Empty(Exception):
-    pass
+"""
+    create,push pop, find length,reverse of the stack
+
+"""
 class Arraystack:
     """
     initalise a class for the stack
@@ -33,25 +35,24 @@ class Arraystack:
         """
         Get the top element without removing the top element
         """
-        if(self.is_empty()):
-            raise Empty("stack is empty")
+        if self.is_empty():
+            print("stack is empty")
         else:
             return self.data[-1]
     def reverse_stack(self,filename):
         """
             print reverse order of a stack 
         """
-        file_value = open(filename)
-        for line in file_value:
-            self.push(line.rstrip('\n'))
-        file_value.close()
-        while not self.is_empty():
-           print(self.pop())
+        with open(filename,'r',encoding="utf-8") as file_value:
+            for line in file_value:
+                self.push(line.rstrip('\n'))
+            file_value.close()
+            while not self.is_empty():
+                return self.pop()
 if __name__=="__main__":
     """
         Main Function 
     """
     file_name="file.txt"
     stack_object = Arraystack()
-    stack_object.reverse_stack(file_name)
     print(stack_object.__len__())
