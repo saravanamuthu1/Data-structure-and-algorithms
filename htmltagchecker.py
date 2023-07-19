@@ -1,6 +1,12 @@
+"""
+Provides  whether a particular string is valid or not
+"""
 from stack import Arraystack
-raw ="<html></html><P>"
+raw_format ="<html></html><P>"
 def parser(raw_text):
+    """
+        HTML tag misamatched checker 
+    """
     stack_object = Arraystack()
     start_index = raw_text.find('<')
     while start_index != -1:
@@ -18,4 +24,4 @@ def parser(raw_text):
         start_index = raw_text.find("<",end_index+1)
     return stack_object.is_empty()
 if __name__ == "__main__":
-    print(parser(raw))
+    print(parser(raw_format))

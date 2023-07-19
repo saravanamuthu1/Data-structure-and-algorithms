@@ -3,7 +3,7 @@ class Node:
         self.right=None
         self.left=None
         self.value=value
-class BST():
+class Binary_search_tree():
     def __init__(self):
         self.root=None
     def insertTree(self,node,value):
@@ -23,13 +23,12 @@ class BST():
             else:
                 print('the value is already present in the node')
     def printInorder(self, node):
-        if(node!=None):
+        if node!=None:
             self.printInorder(node.left)
             print(node.value)
             self.printInorder(node.right)
-            
 if __name__=="__main__":
-    testTree = BST()
+    testTree = Binary_search_tree()
     testTree.insertTree(testTree.root, 200)
     testTree.insertTree(testTree.root, 300)
     testTree.insertTree(testTree.root, 100)

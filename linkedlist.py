@@ -1,14 +1,27 @@
-""" create node class wiht data and pointer """
+"""
+    create,update,delete,reverse,get index,print
+"""
 class Node:
+    """ 
+    create node class wiht data and pointer 
+    """
     def __init__(self,value):
         self.data=value
         self.next=None
 """ Create a linked list"""
 class LinkedList():
+    """ 
+    Create a linked list
+    """
     def __init__(self) -> None:
+        """
+            initialise the constructor for linkedlist
+        """
         self.head=None
-    """ insert the value in linked list"""
     def insertValue(self,value):
+        """ 
+        insert the value in linked list
+        """
         currentNode=Node(value)
         if self.head is None:
             self.head=currentNode
@@ -17,8 +30,10 @@ class LinkedList():
             while temp.next!= None:
                 temp=temp.next
             temp.next=currentNode
-    """ Delete a certain value from the linked list"""
     def deleteValue(self,targetValue):
+        """ 
+        Delete a certain value from the linked list
+        """
         currentNode=self.head
         prevNode=None
         if currentNode.data == targetValue:
@@ -39,8 +54,10 @@ class LinkedList():
                 else:
                     prevNode=currentNode
                     currentNode=currentNode.next
-    """ Get the index of the certain element """
     def getIndex(self,targetValue):
+        """ 
+        Get the index of the certain element 
+        """
         currentNode =self.head
         count=0
         while currentNode is not None:
@@ -50,8 +67,10 @@ class LinkedList():
             else:
                 currentNode = currentNode.next
                 count+=1
-    """ Reverse the given linked list"""
     def reverseList(self):
+        """ 
+        Reverse the given linked list
+        """
         prevNode=None
         currentNode=self.head
         while currentNode is not None:
@@ -60,8 +79,10 @@ class LinkedList():
             prevNode=currentNode
             currentNode=nextNode
         self.head=prevNode
-    """ print the linked list """
     def printList(self):
+        """
+        print the linked list 
+        """
         currentNode=self.head
         while currentNode is not None:
             print(currentNode.data)
