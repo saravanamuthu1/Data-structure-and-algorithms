@@ -37,19 +37,20 @@ class Arraystack:
         Get the top element without removing the top element
         """
         if self.is_empty():
-            return 0
+            return 1
         return self.data[-1]
     def reverse_stack(self,filename):
         """
             print reverse order of a stack 
         """
+        value_list=[]
         with open(filename,'r',encoding="utf-8") as file_value:
             for line in file_value:
                 self.push(line.rstrip('\n'))
             file_value.close()
-            while not self.is_empty():
-                return self.pop()
+        while not self.is_empty():
+            value_list.append(self.pop())
+        return self.pop()
 if __name__=="__main__":
     FILENAME="file.txt"
     stack_object = Arraystack()
-    
