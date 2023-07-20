@@ -8,7 +8,9 @@ class Node:
     def __init__(self,value):
         self.data=value
         self.next=None
-""" Create a linked list"""
+""" 
+Create a linked list
+"""
 class LinkedList():
     """ 
     Create a linked list
@@ -18,6 +20,11 @@ class LinkedList():
             initialise the constructor for linkedlist
         """
         self.head=None
+    def __str__(self):
+        """
+        dummuy class
+        """
+        return self.__class__.__name__
     def insert_value(self,value):
         """ 
         insert the value in linked list
@@ -46,14 +53,13 @@ class LinkedList():
                     if current_node.next is None:
                         prev_node.next=None
                         print('last node is deleted')
-                        return 
+                        return 0
                     else:
                         print('middle node is deleted')
                         prev_node.next=current_node.next
                         return 0
-                else:
-                    prev_node=current_node
-                    current_node=current_node.next
+                prev_node=current_node
+                current_node=current_node.next
     def get_index(self,target_value):
         """ 
         Get the index of the certain element 
@@ -64,9 +70,8 @@ class LinkedList():
             if current_node.data == target_value:
                 print("the index of the target value is"+" "+str((count+1)))
                 return 
-            else:
-                current_node = current_node.next
-                count+=1
+            current_node = current_node.next
+            count+=1
     def reverse_list(self):
         """ 
         Reverse the given linked list

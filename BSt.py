@@ -1,7 +1,7 @@
 """
     create a binary search tree
 """
-class Node:
+class Node: 
     """
         creates a class with left,right,value
     """
@@ -12,6 +12,11 @@ class Node:
         self.right=None
         self.left=None
         self.value=value
+    def __str__(self):
+        """
+        dummuy class
+        """
+        return self.__class__.__name__
 class BinarySearchTree():
     """
         creates binary search tree
