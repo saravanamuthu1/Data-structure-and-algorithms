@@ -52,4 +52,4 @@ class Arraystack:
 if __name__=="__main__":
     FILENAME="file.txt"
     stack_object = Arraystack()
-
+    
