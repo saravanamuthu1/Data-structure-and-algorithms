@@ -52,7 +52,7 @@ class BinarySearchTree():
                 print('the value is already present in the node')
     def print_inorder(self, node):
         """
-            print the bianry search tree
+            print the bianrysearchtree
         """
         if node is not None:
             self.print_inorder(node.left)

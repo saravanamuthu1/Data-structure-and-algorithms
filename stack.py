@@ -37,7 +37,7 @@ class Arraystack:
         Get the top element without removing the top element
         """
         if self.is_empty():
-            return "stact is empty"
+            return 0
         return self.data[-1]
     def reverse_stack(self,filename):
         """
@@ -52,4 +52,4 @@ class Arraystack:
 if __name__=="__main__":
     FILENAME="file.txt"
     stack_object = Arraystack()
-    
+
