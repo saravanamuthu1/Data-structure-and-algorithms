@@ -50,9 +50,6 @@ class Arraystack:
             while not self.is_empty():
                 return self.pop()
 if __name__=="__main__":
-    """
-        Main Function 
-    """
     FILENAME="file.txt"
     stack_object = Arraystack()
     stack_object.__len__()

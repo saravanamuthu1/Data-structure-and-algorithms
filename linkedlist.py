@@ -47,19 +47,17 @@ class LinkedList():
             self.head=current_node.next
             print("first node is deleted")
             return 0
-        else:
-            while current_node is not None:
-                if current_node.data==target_value:
-                    if current_node.next is None:
-                        prev_node.next=None
-                        print('last node is deleted')
-                        return 0
-                    else:
-                        print('middle node is deleted')
-                        prev_node.next=current_node.next
-                        return 0
-                prev_node=current_node
-                current_node=current_node.next
+        while current_node is not None:
+            if current_node.data==target_value:
+                if current_node.next is None:
+                    prev_node.next=None
+                    print('last node is deleted')
+                    return 0
+                print('middle node is deleted')
+                prev_node.next=current_node.next
+                return 0
+            prev_node=current_node
+            current_node=current_node.next
     def get_index(self,target_value):
         """ 
         Get the index of the certain element 
