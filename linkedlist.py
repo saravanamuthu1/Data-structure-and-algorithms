@@ -18,82 +18,82 @@ class LinkedList():
             initialise the constructor for linkedlist
         """
         self.head=None
-    def insertValue(self,value):
+    def insert_value(self,value):
         """ 
         insert the value in linked list
         """
-        currentNode=Node(value)
+        current_node=Node(value)
         if self.head is None:
-            self.head=currentNode
+            self.head=current_node
         else:
             temp=self.head
-            while temp.next!= None:
+            while temp.next is not None:
                 temp=temp.next
-            temp.next=currentNode
-    def deleteValue(self,targetValue):
+            temp.next=current_node
+    def delete_value(self,target_value):
         """ 
         Delete a certain value from the linked list
         """
-        currentNode=self.head
-        prevNode=None
-        if currentNode.data == targetValue:
-            self.head=currentNode.next
+        current_node=self.head
+        prev_node=None
+        if current_node.data == target_value:
+            self.head=current_node.next
             print("first node is deleted")
             return 0
         else:
-            while currentNode is not None:
-                if currentNode.data==targetValue:
-                    if currentNode.next is None:
-                        prevNode.next=None
+            while current_node is not None:
+                if current_node.data==target_value:
+                    if current_node.next is None:
+                        prev_node.next=None
                         print('last node is deleted')
                         return 
                     else:
                         print('middle node is deleted')
-                        prevNode.next=currentNode.next
+                        prev_node.next=current_node.next
                         return 0
                 else:
-                    prevNode=currentNode
-                    currentNode=currentNode.next
-    def getIndex(self,targetValue):
+                    prev_node=current_node
+                    current_node=current_node.next
+    def get_index(self,target_value):
         """ 
         Get the index of the certain element 
         """
-        currentNode =self.head
+        current_node =self.head
         count=0
-        while currentNode is not None:
-            if currentNode.data == targetValue:
+        while current_node is not None:
+            if current_node.data == target_value:
                 print("the index of the target value is"+" "+str((count+1)))
                 return 
             else:
-                currentNode = currentNode.next
+                current_node = current_node.next
                 count+=1
-    def reverseList(self):
+    def reverse_list(self):
         """ 
         Reverse the given linked list
         """
-        prevNode=None
-        currentNode=self.head
-        while currentNode is not None:
-            nextNode=currentNode.next
-            currentNode.next =prevNode
-            prevNode=currentNode
-            currentNode=nextNode
-        self.head=prevNode
-    def printList(self):
+        prev_node=None
+        current_node=self.head
+        while current_node is not None:
+            next_node=current_node.next
+            current_node.next =prev_node
+            prev_node=current_node
+            current_node=next_node
+        self.head=prev_node
+    def print_list(self):
         """
         print the linked list 
         """
-        currentNode=self.head
-        while currentNode is not None:
-            print(currentNode.data)
-            currentNode=currentNode.next
+        current_node=self.head
+        while current_node is not None:
+            print(current_node.data)
+            current_node=current_node.next
 if __name__=="__main__":
     obj1=LinkedList()
-    obj1.insertValue(5)
-    obj1.insertValue(6)
-    obj1.insertValue(7)
-    obj1.insertValue(9)
-    obj1.reverseList()
-    obj1.getIndex(7)
-    obj1.printList()
+    obj1.insert_value(5)
+    obj1.insert_value(6)
+    obj1.insert_value(7)
+    obj1.insert_value(9)
+    obj1.reverse_list()
+    obj1.get_index(7)
+    obj1.print_list()
     

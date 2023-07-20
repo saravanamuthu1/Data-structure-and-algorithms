@@ -44,7 +44,7 @@ class BinarySearchTree():
         """
             print the bianry search tree
         """
-        if node!=None:
+        if node is not None:
             self.print_inorder(node.left)
             print(node.value)
             self.print_inorder(node.right)
