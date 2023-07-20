@@ -2,7 +2,7 @@
 Provides  whether a particular string is valid or not
 """
 from stack import Arraystack
-RAW_FORMAT ="<html></html><P>"
+RAWFORMAT ="<html></html><P>"
 def parser(raw_text):
     """
         HTML tag misamatched checker 
@@ -24,4 +24,4 @@ def parser(raw_text):
         start_index = raw_text.find("<",end_index+1)
     return stack_object.is_empty()
 if __name__ == "__main__":
-    print(parser(RAW_FORMAT))
+    print(parser(RAWFORMAT))

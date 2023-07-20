@@ -53,6 +53,7 @@ if __name__=="__main__":
     """
         Main Function 
     """
-    file_name="file.txt"
+    FILENAME="file.txt"
     stack_object = Arraystack()
-    print(stack_object.__len__())
+    stack_object.__len__()
+    
