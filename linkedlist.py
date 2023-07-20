@@ -16,7 +16,7 @@ class Node:
         dummuy class
         """
         return self.__class__.__name__
-class LinkedList(): 
+class LinkedList():
     """ 
     Create a linked list
     """

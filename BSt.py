@@ -1,7 +1,7 @@
 """
     create a binary search tree
 """
-class Node:  
+class Node:
     """
      creates a class with left,right,value
     """
