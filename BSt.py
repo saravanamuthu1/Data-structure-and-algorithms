@@ -1,7 +1,7 @@
 """
     create a binary search tree
 """
-class Node:  # pylint: disable=too-few-public-methods  
+class Node:  
     """
      creates a class with left,right,value
     """

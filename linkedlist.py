@@ -16,10 +16,7 @@ class Node:
         dummuy class
         """
         return self.__class__.__name__
-""" 
-Create a linked list
-"""
-class LinkedList():  # pylint: disable=too-few-public-methods  
+class LinkedList(): 
     """ 
     Create a linked list
     """
@@ -54,16 +51,16 @@ class LinkedList():  # pylint: disable=too-few-public-methods
         if current_node.data == target_value:
             self.head=current_node.next
             print("first node is deleted")
-            return 0
+            return
         while current_node is not None:
             if current_node.data==target_value:
                 if current_node.next is None:
                     prev_node.next=None
                     print('last node is deleted')
-                    return 0
+                    return
                 print('middle node is deleted')
                 prev_node.next=current_node.next
-                return 0
+                return
             prev_node=current_node
             current_node=current_node.next
     def get_index(self,target_value):
@@ -75,7 +72,7 @@ class LinkedList():  # pylint: disable=too-few-public-methods
         while current_node is not None:
             if current_node.data == target_value:
                 print("the index of the target value is"+" "+str((count+1)))
-                return 
+                return
             current_node = current_node.next
             count+=1
     def reverse_list(self):
