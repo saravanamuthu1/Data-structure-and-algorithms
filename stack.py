@@ -21,6 +21,7 @@ class Arraystack:
             Push a value to the stack
         """
         self.data.append(value)
+        return 0
     def pop(self):
         """
             Pop the last value from the stack
@@ -36,9 +37,8 @@ class Arraystack:
         Get the top element without removing the top element
         """
         if self.is_empty():
-            print("stack is empty")
-        else:
-            return self.data[-1]
+            return "stact is empty"
+        return self.data[-1]
     def reverse_stack(self,filename):
         """
             print reverse order of a stack 
@@ -52,4 +52,4 @@ class Arraystack:
 if __name__=="__main__":
     FILENAME="file.txt"
     stack_object = Arraystack()
-    stack_object.__len__()
+    

@@ -65,4 +65,3 @@ if __name__=="__main__":
     testTree.insert_tree(testTree.root, 100)
     testTree.insert_tree(testTree.root, 30)
     testTree.print_inorder(testTree.root)
-    
