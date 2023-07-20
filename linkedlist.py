@@ -6,8 +6,16 @@ class Node:
     create node class wiht data and pointer 
     """
     def __init__(self,value):
+        """
+            initialise the constructor 
+        """
         self.data=value
         self.next=None
+    def __str__(self):
+        """
+        dummuy class
+        """
+        return self.__class__.__name__
 """ 
 Create a linked list
 """

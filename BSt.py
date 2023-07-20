@@ -1,9 +1,9 @@
 """
     create a binary search tree
 """
-class Node: 
+class Node:
     """
-        creates a class with left,right,value
+     creates a class with left,right,value
     """
     def __init__(self,value):
         """
@@ -26,6 +26,11 @@ class BinarySearchTree():
             initialise a binary search tree
         """
         self.root=None
+    def __str__(self):
+        """
+        dummuy class
+        """
+        return self.__class__.__name__
     def insert_tree(self,node,value):
         """
             insert values into the binary search tree
