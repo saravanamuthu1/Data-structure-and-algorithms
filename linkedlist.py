@@ -19,7 +19,7 @@ class Node:
 """ 
 Create a linked list
 """
-class LinkedList():
+class LinkedList():  # pylint: disable=too-few-public-methods  
     """ 
     Create a linked list
     """
