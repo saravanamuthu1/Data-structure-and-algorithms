@@ -17,6 +17,11 @@ class Node:
         dummuy class
         """
         return self.__class__.__name__
+    def bore(self):
+        """
+         pointer information
+        """
+        print(f"{self.right} is right pointer and {self.left} is the left pointer")
 class BinarySearchTree():
     """
         creates binary search tree

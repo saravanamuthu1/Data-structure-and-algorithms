@@ -16,6 +16,11 @@ class Node:
         dummuy class
         """
         return self.__class__.__name__
+    def value_action(self):
+        """
+            pointer information
+        """
+        print(f"{self.data} is data and {self.next} is the next pointer")
 class LinkedList():
     """ 
     Create a linked list
