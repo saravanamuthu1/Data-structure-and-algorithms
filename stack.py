@@ -54,3 +54,4 @@ class Arraystack:
 if __name__=="__main__":
     FILENAME="file.txt"
     stack_object = Arraystack()
+    result_list = stack_object.reverse_stack(FILENAME)

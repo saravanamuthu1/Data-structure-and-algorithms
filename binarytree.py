@@ -55,6 +55,23 @@ class BinarySearchTree():
                     node.right = Node(value)
             else:
                 print('the value is already present in the node')
+    def contians(self,node,target):
+        """
+         checks whether a value is present in the tree
+        """
+        current_node= node
+        while current_node is not None:
+            if current_node.value < target:
+                curenet_node = current_node.left
+            elif current_node.value > target:
+                current_node = current_node.right
+            else:
+                if current_node.value == target:
+                    print("value is found")
+                    return 0
+        else:
+            print("the value is not in the binary tree")
+            return 0
     def print_inorder(self, node):
         """
             print the bianrysearchtree
@@ -70,3 +87,4 @@ if __name__=="__main__":
     testTree.insert_tree(testTree.root, 100)
     testTree.insert_tree(testTree.root, 30)
     testTree.print_inorder(testTree.root)
+    testTree.contians(testTree.root, 30)
