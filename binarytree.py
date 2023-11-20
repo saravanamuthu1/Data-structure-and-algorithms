@@ -44,6 +44,8 @@ class BinarySearchTree():
             self.root=Node(value)
         else:
             if node.value < value:
+
+
                 if node.left is not None:
                     self.insert_tree(node.left,value)
                 else:
@@ -80,6 +82,10 @@ class BinarySearchTree():
             self.print_inorder(node.left)
             print(node.value)
             self.print_inorder(node.right)
+    def fake_print(self):
+        return "thus is fake"
+    def fake_print(self):
+        return "thus is fake"
 if __name__=="__main__":
     testTree = BinarySearchTree()
     testTree.insert_tree(testTree.root, 200)
